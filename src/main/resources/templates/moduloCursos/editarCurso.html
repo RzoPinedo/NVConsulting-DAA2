@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link href="../../css/estilos.css" rel="stylesheet" type="text/css">
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<link href="../../css/bootstrap-grid.min.css" rel="stylesheet">
 </head>
-<body>
-<p>ACTUALIZAR DATOS</p>
+<body class="bg-secondary">
+	<section class="d-flex justify-content-center">
+	<div   class="card col-md-4 p-3">
+		<div  class="mb-3 " >
+		<h1 class="fw-bold  py-2">Editar Curso</h1>
+		</div>
+		<div class="mb-2">
 			<form th:action="@{/cursos/guardar}"
 				th:object="${cursos}" method="post">
 
@@ -83,6 +92,9 @@
 
 
 			</form>
+</div>
+	</div>
+	</section>
 
 </body>
 </html>
