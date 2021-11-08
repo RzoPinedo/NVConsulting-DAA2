@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>ACTUALIZAR DATOS</p>
+			<form th:action="@{/cursos/guardar}"
+				th:object="${cursos}" method="post">
+
+				<div class="form-group row">
+					<label for="id" class="col-sm-2 col-form-label">ID Curso:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="id"
+							 th:field="*{ID_CURSOS}" readonly="readonly" />
+					</div>
+				</div>
+
+
+				<div class="form-group row">
+					<label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="nombre"
+							placeholder="Nombre Curso" th:field="*{NOMBRE}" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="duracion" class="col-sm-2 col-form-label">Duración:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="duracion"
+							placeholder="Duración" th:field="*{NRO_HORAS}" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="inicio" class="col-sm-2 col-form-label">Fecha Inicio:</label>
+					<div class="col-sm-10">
+						<input type="date" class="form-control" id="inicio" th:field="*{FECHA_INICIO}" />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="fin" class="col-sm-2 col-form-label">Fecha Fin:</label>
+					<div class="col-sm-10">
+						<input type="date" class="form-control" id="fin" th:field="*{FECHA_FIN}" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="precio" class="col-sm-2 col-form-label">
+						Precio:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="precio"
+							placeholder="Ingrese Precio" th:field="*{PRECIO_CURSO}" />
+					</div>
+				</div>
+
+
+				<div class="form-group row">
+					<label for="estado" class="col-sm-2 col-form-label">
+						Estado:</label>
+					<div class="col-sm-10">
+						<textarea rows="5" class="form-control" id="estado" cols="60"
+							placeholder="Estado" th:field="*{ESTADO}">
+					    </textarea>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="empleado" class="col-sm-2 col-form-label">
+						Empleado:</label>
+					<div class="col-sm-10">
+						<textarea rows="5" class="form-control" id="empleado" cols="60"
+							placeholder="Empleado" th:field="*{ID_EMPLEADOS}">
+					    </textarea>
+					</div>
+				</div>
+
+				<div align="center">
+					<button type="submit" class="btn btn-primary">Guardar</button>
+				</div>
+
+
+			</form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Nuevo Curso</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Nuevo Curso</h1>
+		<br />
+		<form action="#" th:action="@{/cursos/guardar}" th:object="${cursos}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Nombre:</td>
+					<td><input type="text" th:field="*{NOMBRE}" /></td>
+				</tr>
+				<tr>
+					<td>Duracion:</td>
+					<td><input type="text" th:field="*{NRO_HORAS}" /></td>
+				</tr>
+				<tr>
+					<td>Fecha Inicio:</td>
+					<td><input type="date" th:field="*{FECHA_INICIO}" /></td>
+				</tr>
+				<tr>
+					<td>Fecha Fin:</td>
+					<td><input type="date" th:field="*{FECHA_FIN}" /></td>
+				</tr>
+				
+				<tr>
+					<td>Precio:</td>
+					<td><input type="text" th:field="*{PRECIO_CURSO}" /></td>
+				</tr>
+				
+				<tr>
+					<td>Estado:</td>
+					<td><input type="text" th:field="*{ESTADO}" /></td>
+				</tr>
+				
+				<tr>
+					<td>Empleados:</td>
+					<td>
+					<select th:field="*{ID_EMPLEADOS}">
+						<option th:each="empleado:${empleados}"
+							th:value="${empleado.ID_EMPLEADOS}"
+							th:text="${empleado.NOMBRES}"
+						/>
+					</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>
