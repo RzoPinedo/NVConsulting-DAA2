@@ -1,9 +1,7 @@
 package idat.edu.pe.service;
 
-import javax.validation.Valid;
-
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
+//import javax.validation.Valid;
+//import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import idat.edu.pe.dto.ChangePasswordForm;
 import idat.edu.pe.exception.UsernameOrIdNotFound;
 import idat.edu.pe.modelo.User;

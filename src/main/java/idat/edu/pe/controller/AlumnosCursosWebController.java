@@ -8,13 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.fasterxml.jackson.annotation.JacksonInject.Value;
-
-import idat.edu.pe.modelo.Alumnos;
+//import org.springframework.web.servlet.ModelAndView;
+//import idat.edu.pe.modelo.Alumnos;
 import idat.edu.pe.modelo.AlumnosCursos;
-import idat.edu.pe.modelo.Cursos;
+//import idat.edu.pe.modelo.Cursos;
 import idat.edu.pe.service.AlumnosCursosServicio;
 
 @Controller
