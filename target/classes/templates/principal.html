@@ -28,12 +28,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link text-light active" aria-current="page" th:href="@{/principal}">Inicio</a>
+                        <a class="nav-item nav-link text-light" aria-current="page" th:href="@{/principal}">Inicio</a>
                         <a class="nav-item nav-link text-light" th:href="@{/cursos}">Cursos</a>                        
                         <a class="nav-item nav-link text-light" th:href="@{/cursos/listarTodo}">Adm Cursos</a>
                         <a class="nav-item nav-link text-light" th:href="@{/nosotros}">Nosotros</a>
-                        <a class="nav-item nav-link text-light" href="#">Contacto</a>
-                        <a class="nav-item nav-link text-light disabled">Ayuda</a>                     
+                        <a class="nav-item nav-link text-light"  th:href="@{/contacto}">Contacto</a>
+                        <a class="nav-item nav-link text-light disabled" th:href="@{/ayuda}">Ayuda</a>                     
                     </div>
                     <div class="ml-auto">
                     	<a class="nav-item nav-link text-light" th:href="@{/login}">Login</a>
@@ -106,41 +106,26 @@
             </div>
             <br>
             <br>
-            <div class="container-fluid row" id="galeria">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-3"></div>
-                        <div class="col-6">
-                            <div class="text-center align-middle">
-                                <p><strong>Siempre comprometidos con nuestros alumnos</strong></p>
-                            </div>
-                            <div id="slideGaleria" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="./imagenes/galeria/1.jpg" class="d-block w-100" alt="#">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./imagenes/galeria/2.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./imagenes/galeria/3.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./imagenes/galeria/4.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./imagenes/galeria/5.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./imagenes/galeria/6.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3"></div>
-                    </div>
-                </div>
+            <div class="slide-contenedor">
+            <div class="miSlider fade">
+                <img src="imagenes/galeria/1.jpg" alt="">
             </div>
+            <div class="miSlider fade">
+                <img src="imagenes/galeria/2.jpg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="imagenes/galeria/3.jpg" alt="">
+            </div>
+            <div class="direcciones">
+                <a class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+                <a class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+            </div>
+            <div class="barras">
+                <span class="barra active" onclick="posicionSlide(1)"></span>
+                <span class="barra" onclick="posicionSlide(2)"></span>
+                <span class="barra" onclick="posicionSlide(3)"></span>
+            </div>
+        </div>
             <br>
             <br>
         </div>
@@ -199,9 +184,11 @@
             <p class="small">&copy; Todos los derechos reservados :: Novus Vicis Consulting Group SAC :: Perú 2021</p>
         </div>
      
-    </footer>    
+    </footer>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slide.js"></script>
 </body>
 </html>
