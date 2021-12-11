@@ -1,0 +1,36 @@
+[{
+    "precio": 20,
+    "id": 1,
+    "title": "Chocolate",
+    "imagen": "./imagenes/helado-chocolate.jpg"
+  },
+  {
+    "precio": 20,
+    "id": 2,
+    "title": "Fresa",
+    "imagen": "./imagenes/helado-fresa.jpg"
+  },
+  {
+    "precio": 18,
+    "id": 3,
+    "title": "Vainilla",
+    "imagen": "./imagenes/helado-vainilla.jpg"
+  },
+  {
+    "precio": 19,
+    "id": 4,
+    "title": "Lucuma",
+    "imagen": "imagenes/helado-lucuma.jpg"
+  },
+  {
+    "precio": 17,
+    "id": 5,
+    "title": "Coco",
+    "imagen": "imagenes/helado-coco.jpg"
+  },
+  {
+    "precio": 15,
+    "id": 6,
+    "title": "Menta",
+    "imagen": "imagenes/helado-menta.jpg"
+  }]
